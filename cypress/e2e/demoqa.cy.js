@@ -10,7 +10,7 @@ import SortablePage from "../pageObjects/Sortable.page.js";
 describe('Final task part 2', () => {
 
   // Scenario 1
-  it.only('Forms - Practice forms', () => {
+  it('Forms - Practice forms', () => {
     BasePage.visitForm();
     PracticeFormPage.firstName.type("Liene");
     PracticeFormPage.lastName.type("Neimane");
