@@ -34,8 +34,10 @@ class PracticeFormPage extends BasePage {
         return cy.get('select[class="react-datepicker__month-select"]');
     }
 
-    static get setDay() {
-        return cy.get('div[aria-label="Choose Wednesday, February 29th, 1984"]');
+    static setDay(day) {
+        return cy.get('[class*="react-datepicker__day"]')
+            .not("[class*='react-datepicker__day--outside-month']")
+            .contains(day).click();
     }
 
     static get subjectsInput() {

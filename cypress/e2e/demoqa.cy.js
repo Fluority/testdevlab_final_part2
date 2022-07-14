@@ -10,7 +10,7 @@ import SortablePage from "../pageObjects/Sortable.page.js";
 describe('Final task part 2', () => {
 
   // Scenario 1
-  it('Forms - Practice forms', () => {
+  it.only('Forms - Practice forms', () => {
     BasePage.visitForm();
     PracticeFormPage.firstName.type("Liene");
     PracticeFormPage.lastName.type("Neimane");
@@ -20,12 +20,13 @@ describe('Final task part 2', () => {
     PracticeFormPage.dateOfBirth.click();
     PracticeFormPage.setYear.select("1984");
     PracticeFormPage.setMonth.select("February");
-    PracticeFormPage.setDay.click();
+    PracticeFormPage.setDay("29");
     PracticeFormPage.subjectsInput.type("math");
     PracticeFormPage.subjectsMath.click();
     PracticeFormPage.hobbiesSports.click();
     PracticeFormPage.hobbiesMusic.click();
     PracticeFormPage.currentAddress.type("Maizes iela 3");
+    // Without an ad on bottom, it works
     PracticeFormPage.stateInput.click();
     PracticeFormPage.stateHaryana.click();
     PracticeFormPage.cityInput.click();
